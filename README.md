@@ -7,7 +7,7 @@
 [![GitHub All Releases](https://img.shields.io/github/downloads/mengmo/Duktape-Windows/total?logo=github)](https://github.com/mengmo/Duktape-Windows/releases)
 [![GitHub license](https://img.shields.io/github/license/mengmo/Duktape-Windows?logo=open-source-initiative)](https://github.com/mengmo/Duktape-Windows/blob/master/LICENSE)
 
-Method to build [Duktape](https://duktape.org/) on Windows, and [binary releases](https://github.com/mengmo/Duktape-Windows/releases).
+Method to build [Duktape](https://duktape.org/) on Windows, and [prebuilt binary releases](https://github.com/mengmo/Duktape-Windows/releases).
 
 ## Build Prerequisites
 Install [MSYS2](http://www.msys2.org/)
