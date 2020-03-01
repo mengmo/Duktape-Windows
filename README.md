@@ -52,13 +52,18 @@ pacman -S mingw-w64-i686-python2-yaml
 python2 tools/configure.py --output-directory ./libduktape --dll
 gcc -shared -o libduktape.dll -Wl,-static,-s -fPIC -Os -pedantic -std=c99 -Wall -Wextra -fstrict-aliasing -fomit-frame-pointer -I./libduktape ./libduktape/duktape.c -lm
 ```
+### Build static library
+```
+gcc -c ./libduktape/duktape.c
+ar rcs libduktape.a duktape.o
+```
 
 ## Packaging
 ```
 mkdir ./bin
 mv duk.exe ./bin
 mkdir ./lib
-mv libduktape.dll ./lib
+mv libduktape.dll libduktape.a ./lib
 mkdir ./include
 cp -p ./libduktape/duk_config.h ./libduktape/duktape.h ./include
 zip -9 -r $(basename `pwd`)-win$(echo ${MSYSTEM:0-2}).zip ./bin ./include ./lib LICENSE.txt README.rst
