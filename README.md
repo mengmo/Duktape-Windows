@@ -54,7 +54,7 @@ gcc -shared -o libduktape.dll -Wl,-static,-s -fPIC -Os -pedantic -std=c99 -Wall 
 ```
 ### Build static library
 ```
-gcc -c ./libduktape/duktape.c
+gcc -c -fPIC -Os -pedantic -std=c99 -Wall -Wextra -fstrict-aliasing -fomit-frame-pointer ./libduktape/duktape.c
 ar rcs libduktape.a duktape.o
 ```
 
