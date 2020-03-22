@@ -32,7 +32,7 @@ Get [Duktape](https://github.com/svaarala/duktape) latest release from [![GitHub
 ```
 tar -xvJf duktape-2.5.0.tar.xz
 cd ./duktape-2.5.0
-make -f Makefile.cmdline DEFINES="-Wl,-static,-s"
+make -f Makefile.cmdline DEFINES="-static -s"
 ```
 Here is enough if you'd like to test only
 
@@ -50,7 +50,7 @@ pacman -S mingw-w64-i686-python2-yaml
 ### Compilation
 ```
 python2 tools/configure.py --output-directory ./libduktape --dll
-gcc -shared -o libduktape.dll -Wl,-static,-s -fPIC -Os -pedantic -std=c99 -Wall -Wextra -fstrict-aliasing -fomit-frame-pointer -I./libduktape ./libduktape/duktape.c -lm
+gcc -shared -o libduktape.dll -static -s -fPIC -Os -pedantic -std=c99 -Wall -Wextra -fstrict-aliasing -fomit-frame-pointer -I./libduktape ./libduktape/duktape.c -lm
 ```
 ### Build static library
 ```
